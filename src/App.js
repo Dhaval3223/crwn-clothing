@@ -17,6 +17,7 @@ import Header from './components/header/header.component';
 import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
 
 import { auth, createUserProfileDocuments } from './firebase/firebase.utils';
+
 import { setCurrentUser } from './redux/user/user.actions';
 import { selecCurrenttUser } from './redux/user/user.selectors';
 
@@ -68,7 +69,7 @@ class App extends React.Component {
 }
 
 const mapStateToProps = createStructuredSelector({
-  currentUser: selecCurrenttUser 
+  currentUser: selecCurrenttUser ,
 })
 
 const mapDispatchToProps = dispatch => ({
